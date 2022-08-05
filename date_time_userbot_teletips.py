@@ -27,6 +27,7 @@ async def main_teletips():
     try:
         while True:
             if Date_Time_Userbot_teletips.is_connected: 
+                print("Hello world")
                 TimeZone_teletips = datetime.datetime.now(pytz.timezone(f"{Time_Zone}"))
                 Time_teletips = TimeZone_teletips.strftime("   %I:%M")
                 Date_teletips = TimeZone_teletips.strftime("%d.%m.%Y") 
