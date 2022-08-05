@@ -28,4 +28,3 @@ async def main_teletips():
 
 print("DATE TIME USERBOT IS ALIVE!")
 asyncio.ensure_future(main_teletips())
-Date_Time_Userbot_teletips.run()
