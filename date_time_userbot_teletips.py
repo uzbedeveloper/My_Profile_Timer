@@ -14,9 +14,16 @@ import pytz
 import asyncio
 import random
 import os
+ 
 
 async def main_teletips():
-    print("Hi")        
+    try:
+        while True:
+            print("Hi") 
+                
+            await asyncio.sleep(60) 
+    except FloodWait as e:
+        await asyncio.sleep(e.x)         
 
 print("DATE TIME USERBOT IS ALIVE!")
 asyncio.ensure_future(main_teletips())
