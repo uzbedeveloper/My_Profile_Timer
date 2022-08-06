@@ -18,7 +18,6 @@ Date_Time_Userbot_teletips=Client(
     api_id = int(os.environ["API_ID"]),
     api_hash = os.environ["API_HASH"],
     session_string = os.environ["SESSION_STRING"]
-    session_name = os.environ["SESSION_NAME"]
 )
 
 Time_Zone = os.environ["TIME_ZONE"]
