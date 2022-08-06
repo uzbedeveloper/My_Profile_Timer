@@ -15,47 +15,8 @@ import asyncio
 import random
 import os
 
-Date_Time_Userbot_teletips=Client(
-    api_id = int(os.environ["API_ID"]),
-    api_hash = os.environ["API_HASH"],
-    session_name = os.environ["SESSION_NAME"]
-)
-
-Time_Zone = os.environ["TIME_ZONE"]
-
 async def main_teletips():
-    try:
-        while True:
-            print("Hi") 
-            if Date_Time_Userbot_teletips.is_connected: 
-                print("Hello world")
-                TimeZone_teletips = datetime.datetime.now(pytz.timezone(f"{Time_Zone}"))
-                Time_teletips = TimeZone_teletips.strftime("   %I:%M")
-                Date_teletips = TimeZone_teletips.strftime("%d.%m.%Y") 
-              
-                today = datetime.datetime.now()
-                print(today)
-                bday = datetime.datetime(2022,8,29,0,0)
-                print(bday)
-                time_diff = bday - today
-                print(f"Your birthday is in {time_diff}")
-                tdays = time_diff.days
-                print(f"Your birthday is in {tdays} days. abs={abs(int(tdays))}")
-                tsecs = time_diff.total_seconds()
-                print(f"Your birthday is {tsecs} seconds away. and {int(tsecs)} seconds away. abs={abs(int(tsecs))}")
-                tmins = tsecs/60
-                print(f"Your birthday is {tmins} minutes away. and {int(tmins)} minutes away. abs={abs(int(tmins))}")
-                thrs = tsecs/(60*60)
-                print(f"Your birthday is {thrs} hours away. and {int(thrs)} hours away. abs={abs(int(thrs))}")
-             
-                await Date_Time_Userbot_teletips.update_profile(bio = f"Tug'ulgan kunimga: {abs(int(tdays))}-kun, {abs(int(thrs))}-soat, {abs(int(tmins))}-daqiqa qoldi" , last_name = f"{Time_teletips}")
-                       
-                print("Profile Updated! ")
-                
-            await asyncio.sleep(60) 
-    except FloodWait as e:
-        await asyncio.sleep(e.x)         
+    print("Hi")        
 
 print("DATE TIME USERBOT IS ALIVE!")
 asyncio.ensure_future(main_teletips())
-Date_Time_Userbot_teletips.run()
