@@ -21,9 +21,9 @@ async def main_teletips():
         while True:
             print("Hi") 
                 
-            await asyncio.sleep(60) 
+            await asyncio.sleep(10) 
     except FloodWait as e:
-        await asyncio.sleep(e.x)         
+        await asyncio.sleep(10)         
 
 print("DATE TIME USERBOT IS ALIVE!")
 asyncio.ensure_future(main_teletips())
